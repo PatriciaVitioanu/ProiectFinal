@@ -1,0 +1,27 @@
+.destination-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.destination__image{
+    width: 230px;
+    height: 130px;
+    border-radius: 6px;
+}
+
+.destination__title{
+    margin: 0;
+    font-size: .6rem;
+}
+
+span {
+    font-size: .6rem;
+}
+
+.destination__year,
+.destination__season,
+.destination__continent {
+    margin-right: .5rem;
+}
