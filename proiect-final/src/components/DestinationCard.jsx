@@ -25,12 +25,12 @@ function DestinationCard({destinationElement}){
   export default DestinationCard;
 
 DestinationCard.propTypes = {
-destinationElement: {
+destinationElement: PropTypes.shape({
     id: PropTypes.string,
     imageUrl: PropTypes.string,
-    year: PropTypes.string, 
+    year: PropTypes.number, 
     season: PropTypes.string, 
     continent: PropTypes.string, 
     title: PropTypes.string, 
-},
+}),
 };
