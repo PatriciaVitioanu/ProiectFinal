@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 
-function DestinationCard({destinationElement}){
+import './DestinationCard.css';
+
+function DestinationCard({destinationElement, large = false}){
     const {id, imageUrl, year, season, continent, title} = destinationElement;
 
     return(
-  <li className="destination" key={id}>
+  <li className={`destination ${large ? "destination--large" : "destination--small" }`} key={id}>
           <img className="destination__image" src={imageUrl} />
          <div>
           <span className="destination__year">{year}</span>
@@ -25,6 +27,7 @@ function DestinationCard({destinationElement}){
   export default DestinationCard;
 
 DestinationCard.propTypes = {
+  large: PropTypes.bool,
 destinationElement: PropTypes.shape({
     id: PropTypes.string,
     imageUrl: PropTypes.string,

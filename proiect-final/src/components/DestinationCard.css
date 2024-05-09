@@ -1,8 +1,10 @@
-.destination-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style-type: none;
+.destination--large .destination__image{
+width: 300px ;
+height: 150px;
+}
+
+.destination--large{
+    position: relative;
 }
 
 .destination__image{

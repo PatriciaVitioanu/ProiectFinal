@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export class Destination{
-    constructor(title, imageUrl, year, season, continent, bookmark){
+    constructor(title, imageUrl, year, season, continent, bookmark, trending){
        this.id = uuidv4();
         this.title = title;
         this.imageUrl = imageUrl;
@@ -9,5 +9,6 @@ export class Destination{
         this.season = season;
         this.continent = continent;
         this.bookmark = bookmark;
+        this.trending = trending;
     }
 }

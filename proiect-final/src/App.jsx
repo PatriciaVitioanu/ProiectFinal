@@ -1,8 +1,8 @@
 import './App.css'
 import Navbar from "./components/Navbar";
-import Search from './components/Search';
+import Search from './components/search/Search';
 import Carousel from './components/Carousel';
-import Recommended from './components/Recommended';
+import Recommended from './components/recommended/Recommended';
 import { useState } from 'react';
 
 
@@ -16,8 +16,10 @@ function onSearchChange (_searchTerm){
  <>
  <Navbar />
  <Search onSearchChange={onSearchChange}/>
+ <section>
  <Carousel />
  <Recommended searchTerm={searchTerm} />
+ </section>
  </>
   );
 }

@@ -1,4 +1,4 @@
-import { Destination } from "./models"
+import { Destination } from "../components/models"
 
 export const destinations = [
     new Destination (
@@ -7,7 +7,8 @@ export const destinations = [
         2024,
         "Summer",
         "Europa",
-        false
+        false,
+        false,
     ),
     new Destination (
         "Japan",
@@ -15,7 +16,8 @@ export const destinations = [
         2024,
         "Autumn",
         "Asia",
-        false
+        false,
+        true,
     ),
     new Destination (
         "Peru",
@@ -23,7 +25,8 @@ export const destinations = [
         2025,
         "Spring",
         "America",
-        false
+        false,
+        true,
     ),
     new Destination (
         "Tanzania",
@@ -31,7 +34,8 @@ export const destinations = [
         2025,
         "Autumn",
         "Afirca",
-        false
+        false,
+        true,
     ),
     new Destination (
         "Iceland",
@@ -39,7 +43,8 @@ export const destinations = [
         2024,
         "Winter",
         "Europa",
-        false
+        false,
+        false,
     ),
     new Destination (
         "South Korea",
@@ -47,7 +52,8 @@ export const destinations = [
         2025,
         "Autumn",
         "Asia",
-        false
+        false,
+        false,
     ),
     new Destination (
         "Philipines",
@@ -55,7 +61,8 @@ export const destinations = [
         2024,
         "Winter",
         "Asia",
-        false
+        false,
+        true,
     ),
     new Destination (
         "Canada",
@@ -63,7 +70,8 @@ export const destinations = [
         2025,
         "Winter",
         "America",
-        false
+        false,
+        false,
     ),
     new Destination (
         "Hawaii",
@@ -79,7 +87,8 @@ export const destinations = [
         2026,
         "Autumn",
         "Asia",
-        false
+        false,
+        false,
     ),
     new Destination (
         "Egypt",
@@ -87,7 +96,8 @@ export const destinations = [
         2025,
         "Summer",
         "Africa",
-        false
+        false,
+        true,
     ),
     new Destination (
         "Australia",
@@ -95,6 +105,9 @@ export const destinations = [
         2026,
         "Summer",
         "Oceania",
-        false
+        false,
+        true,
     ),
-    ]
+    ];
+
+    export const trendingDestinations = destinations.filter(({trending})=> trending);
