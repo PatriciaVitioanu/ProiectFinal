@@ -16,7 +16,7 @@ return (
         onChange={inputChange}
         className="search"
         type="text"
-        placeholder="Search for movies or TV series"
+        placeholder="Search for a destination"
       />
     </div>
   );

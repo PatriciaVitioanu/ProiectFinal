@@ -1,0 +1,133 @@
+{
+  "destinations": [
+    {
+      "id": "c0efb9f6-3395-4743-b210-85087564ab77",
+      "title": "Canary Islands",
+      "imageUrl": "https://www.ambassadorcruiseline.com/site/assets/files/2082/aerial_view_of_puerto_de_la_cruz-_tenerife.jpg",
+      "year": 2024,
+      "season": "Summer",
+      "continent": "Europa",
+      "bookmark": false,
+      "trending": false
+    },
+
+    {
+      "id": "e432db34-0587-4df8-a3d0-fb784272f2a4",
+      "title": "Japan",
+      "imageUrl": "https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg",
+      "year": 2024,
+      "season": "Autumn",
+      "continent": "Asia",
+      "bookmark": false,
+      "trending": true
+    },
+
+    {
+      "id": "369d07ae-1abf-4910-bbbc-e41a5ca622b8",
+      "title": "Peru",
+      "imageUrl": "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_553984249v2.jpg",
+      "year": 2025,
+      "season": "Spring",
+      "continent": "America",
+      "bookmark": false,
+      "trending": true
+    },
+
+    {
+      "id": "d804245e-b539-4917-9fbd-96ccd951c8e6",
+      "title": "Tanzania",
+      "imageUrl": "https://www.state.gov/wp-content/uploads/2018/11/Tanzania-e1555938157355-2501x1406.jpg",
+      "year": 2025,
+      "season": "Autumn",
+      "continent": "Afirca",
+      "bookmark": false,
+      "trending": true
+    },
+
+    {
+      "id": "90e10dcb-9e03-4151-839c-212fe1da61b3",
+      "title": "Iceland",
+      "imageUrl": "https://content.icelandtravel.is///wp-content/uploads/2019/03/Vestrahorn-mountain.jpg",
+      "year": 2024,
+      "season": "Winter",
+      "continent": "Europa",
+      "bookmark": false,
+      "trending": false
+    },
+
+    {
+      "id": "57b84793-8206-4633-8541-abd120a86bd0",
+      "title": "South Korea",
+      "imageUrl": "https://lp-cms-production.imgix.net/2019-06/09a64fea2933f6da77ab07d671d1f678-south-korea.jpg",
+      "year": 2025,
+      "season": "Autumn",
+      "continent": "Asia",
+      "bookmark": false
+    },
+
+    {
+      "id": "bb59f169-742b-47d8-b739-09c96c106c26",
+      "title": "Philipines",
+      "imageUrl": "https://i.natgeofe.com/n/04505c35-858b-4e95-a1a7-d72e5418b7fc/steep-karst-cliffs-of-el-nido-in-palawan_16x9.jpg",
+      "year": 2024,
+      "season": "Winter",
+      "continent": "Asia",
+      "bookmark": false,
+      "trending": true
+    },
+
+    {
+      "id": "ad617845-0fe9-48ac-b3cc-a7248d8c5a53",
+      "title": "Canada",
+      "imageUrl": "https://content.api.news/v3/images/bin/15a68dc4169b2e0bdb8e679a81d51d79",
+      "year": 2025,
+      "season": "Winter",
+      "continent": "America",
+      "bookmark": false,
+      "trending": false
+    },
+
+    {
+      "id": "a94ecfeb-6698-40f8-8b55-733081ef4897",
+      "title": "Hawaii",
+      "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/201230100452-10-2021-travel-destinations-hawaii.jpg?q=x_0,y_0,h_1632,w_2900,c_fill/h_720,w_1280",
+      "year": 2024,
+      "season": "Summer",
+      "continent": "America",
+      "bookmark": false
+    },
+
+    {
+      "id": "ada5cd0a-9c35-4ae2-9e7f-35e84b9fb06d",
+      "title": "Vietnam",
+      "imageUrl": "https://idsb.tmgrup.com.tr/ly/uploads/images/2021/05/26/117390.jpg",
+      "year": 2026,
+      "season": "Autumn",
+      "continent": "Asia",
+      "bookmark": false,
+      "trending": false
+    },
+
+    {
+      "id": "6810e486-5c3a-41bd-9e10-4184c4f41aaf",
+      "title": "Egypt",
+      "imageUrl": "https://c4.wallpaperflare.com/wallpaper/529/70/359/sphynx-pyramid-egypt-old-building-wallpaper-preview.jpg",
+      "year": 2025,
+      "season": "Summer",
+      "continent": "Africa",
+      "bookmark": false,
+      "trending": true
+    },
+
+    {
+      "id": "766f7a42-af5f-4f15-a29b-addd16abf1a0",
+      "title": "Australia",
+      "imageUrl": "https://images7.alphacoders.com/716/716104.jpg",
+      "year": 2026,
+      "season": "Summer",
+      "continent": "Oceania",
+      "bookmark": false,
+      "trending": true
+    }
+  ]
+}

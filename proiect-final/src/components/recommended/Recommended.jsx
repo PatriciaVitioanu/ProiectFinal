@@ -2,12 +2,20 @@ import { destinations } from "../../data/data";
 import "./Recommended.css";
 import DestinationCard from "../DestinationCard";
 
-function Recommended({ searchTerm }) {
+import PropTypes from "prop-types";
+
+import { Link } from "react-router-dom";
+
+
+
+
+function Recommended({ searchTerm, destinations }) {
   const filteredDestinations = destinations.filter(({ title }) =>
     title.toUpperCase().includes(searchTerm.toUpperCase())
   );
 
-const destinationsNotFound = filteredDestinations.length === 0;
+  const destinationsNotFound = filteredDestinations.length === 0;
+
 
   return (
     <section>
@@ -20,10 +28,12 @@ const destinationsNotFound = filteredDestinations.length === 0;
       ) : (
         <ul className="destination-list">
           {filteredDestinations.map((destinationItem) => (
-            <DestinationCard
-              destinationElement={destinationItem}
+            <Link
               key={destinationItem.id}
-            />
+              to={`/destination/${destinationItem.id}`}
+            >
+              <DestinationCard destinationElement={destinationItem} />
+            </Link>
           ))}
         </ul>
       )}
@@ -32,3 +42,8 @@ const destinationsNotFound = filteredDestinations.length === 0;
 }
 
 export default Recommended;
+
+Recommended.propTypes = {
+  searchTerm: PropTypes.string,
+  destinations : PropTypes.any,
+};

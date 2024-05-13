@@ -1,29 +1,40 @@
-.destination--large .destination__image{
-width: 300px ;
-height: 150px;
+.destination--large .destination__image {
+  width: 300px;
+  height: 150px;
 }
 
-.destination--large{
-    position: relative;
+.destination--large {
+  position: relative;
 }
 
-.destination__image{
-    width: 230px;
-    height: 130px;
-    border-radius: 6px;
+.destination__image {
+  width: 230px;
+  height: 130px;
+  border-radius: 6px;
 }
 
-.destination__title{
-    margin: 0;
-    font-size: .6rem;
+.destination__title {
+  margin: 0;
+  font-size: 0.6rem;
 }
 
 span {
-    font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 .destination__year,
 .destination__season,
 .destination__continent {
-    margin-right: .5rem;
+  margin-right: 0.5rem;
+}
+
+.destination__info{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    transition: font-size 0.3s ease; 
+}
+
+
+.destination__info:hover {
+    font-size: 30px; 
 }

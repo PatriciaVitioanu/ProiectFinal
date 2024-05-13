@@ -1,26 +1,20 @@
-import './App.css'
-import Navbar from "./components/Navbar";
-import Search from './components/search/Search';
-import Carousel from './components/Carousel';
-import Recommended from './components/recommended/Recommended';
-import { useState } from 'react';
+import "./App.css";
 
+import Home from "./components/home/FirstPage";
 
-function App () {
-  const [searchTerm, setSearchTerm] = useState('');
-  
-function onSearchChange (_searchTerm){
-  setSearchTerm(_searchTerm);
-}
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DestinationDetails from "./components/destination-details/DestinationDetails";
+
+function App() {
   return (
- <>
- <Navbar />
- <Search onSearchChange={onSearchChange}/>
- <section>
- <Carousel />
- <Recommended searchTerm={searchTerm} />
- </section>
- </>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/destination/:idFromPath" element={<DestinationDetails />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

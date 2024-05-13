@@ -1,9 +1,12 @@
-import { trendingDestinations } from "../data/data";
 import DestinationCard from "./DestinationCard";
 
 import "./Carousel.css";
 
-function Carousel() {
+import PropTypes from 'prop-types';
+
+function Carousel({destinations}) {
+  const trendingDestinations = destinations.filter(({trending})=> trending);
+
   return (
     <ul className="trending">
       {trendingDestinations.map((destination) => (
@@ -18,3 +21,7 @@ function Carousel() {
 }
 
 export default Carousel;
+
+Carousel.propTypes= {
+  destinations: PropTypes.array,
+}
