@@ -1,15 +1,19 @@
-import { destinations } from "../../data/data";
+
 import "./Recommended.css";
 import DestinationCard from "../DestinationCard";
 
 import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DestinationContext } from "../../App";
 
 
 
 
-function Recommended({ searchTerm, destinations }) {
+function Recommended({ searchTerm }) {
+  const { destinations }= useContext(DestinationContext)
+
   const filteredDestinations = destinations.filter(({ title }) =>
     title.toUpperCase().includes(searchTerm.toUpperCase())
   );

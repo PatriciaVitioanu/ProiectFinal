@@ -37,7 +37,7 @@ DestinationCard.propTypes = {
   destinationElement: PropTypes.shape({
     id: PropTypes.string,
     imageUrl: PropTypes.string,
-    year: PropTypes.number,
+    year: PropTypes.any,
     season: PropTypes.string,
     continent: PropTypes.string,
     title: PropTypes.string,

@@ -1,10 +1,15 @@
+import { useContext } from "react";
+
 import DestinationCard from "./DestinationCard";
 
 import "./Carousel.css";
 
 import PropTypes from 'prop-types';
+import { DestinationContext } from "../App";
 
-function Carousel({destinations}) {
+function Carousel() {
+  const {destinations} = useContext(DestinationContext);
+
   const trendingDestinations = destinations.filter(({trending})=> trending);
 
   return (

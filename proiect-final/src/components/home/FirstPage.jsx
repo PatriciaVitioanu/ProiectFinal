@@ -1,9 +1,9 @@
-import Navbar from "../Navbar";
 import Search from "../search/Search";
 import Carousel from "../Carousel";
 import Recommended from "../recommended/Recommended";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DestinationContext } from "../../App";
 
 //Version 1
 //function retrieveDestinations() {
@@ -21,7 +21,8 @@ async function retrieveDestinations(setDestinations) {
 
 export default function Home () {
     const [searchTerm, setSearchTerm] = useState("");
-    const [destinations, setDestinations] = useState([]);
+    //const [destinations, setDestinations] = useState([]);
+    const { setDestinations} = useContext(DestinationContext); 
 
     function onSearchChange(_searchTerm) {
       setSearchTerm(_searchTerm);
@@ -39,15 +40,14 @@ export default function Home () {
 
   useEffect(() => {
     retrieveDestinations(setDestinations);
-  }, []);
+  });
 
     return (
         <>
-         <Navbar />
                 <Search onSearchChange={onSearchChange} />
                 <section>
-                  <Carousel destinations={destinations} />
-                  <Recommended destinations={destinations} searchTerm={searchTerm} />
+                  <Carousel />
+                  <Recommended searchTerm={searchTerm} />
                 </section>
         </>
     );
