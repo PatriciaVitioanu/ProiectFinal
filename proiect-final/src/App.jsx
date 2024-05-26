@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./App.css";
 
@@ -11,15 +11,26 @@ import Navbar from "./components/Navbar";
 
 export const DestinationContext = React.createContext();
 
+async function retrieveDestinations(setDestinations) {
+  const response = await fetch("http://localhost:3000/destinations");
+  const destinationsFromServer = await response.json();
+
+  setDestinations(destinationsFromServer);
+}
+
 function App() {
   const [destinations, setDestinations] = useState([]);
+
+  useEffect (() => {
+    retrieveDestinations(setDestinations);
+  },[]);
 
   return (
     <>
       <DestinationContext.Provider value={{ destinations, setDestinations }}>
         <BrowserRouter>
 
-        <Navbar></Navbar>
+        <Navbar/>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route
@@ -27,7 +38,8 @@ function App() {
               element={<DestinationDetails />}
             ></Route>
             <Route path="/create-destination" element={<CreateDestination/>}></Route>
-          </Routes>
+            <Route path="/edit-destination/:idFromPath" element={<CreateDestination/>}></Route>
+           </Routes>
         </BrowserRouter>
       </DestinationContext.Provider>
     </>
