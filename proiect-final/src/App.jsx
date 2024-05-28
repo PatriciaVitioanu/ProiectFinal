@@ -1,46 +1,55 @@
-import React, { useEffect, useState } from "react";
-
-import "./App.css";
-
 import Home from "./components/home/FirstPage";
 import DestinationDetails from "./components/destination-details/DestinationDetails";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, {useEffect, useState } from "react";
+
+import "./App.css";
+
+import {Routes, Route, useNavigate } from "react-router-dom";
 import CreateDestination from "./components/create-destination/CreateDestination";
+import { retrieveDestinations } from "./library/destinations";
 import Navbar from "./components/Navbar";
+import { Register } from "./components/auth/register/Register";
+import Login from "./components/auth/login/Login";
 
 export const DestinationContext = React.createContext();
+export const AuthContext = React.createContext();
 
-async function retrieveDestinations(setDestinations) {
-  const response = await fetch("http://localhost:3000/destinations");
-  const destinationsFromServer = await response.json();
-
-  setDestinations(destinationsFromServer);
-}
 
 function App() {
+  const navigate = useNavigate();
+  const accessToken = localStorage.getItem("accessToken");
   const [destinations, setDestinations] = useState([]);
+  const [auth, setAuth] = useState(accessToken);
 
-  useEffect (() => {
-    retrieveDestinations(setDestinations);
-  },[]);
+  useEffect(() => {
+    retrieveDestinations(setDestinations, auth, navigate).catch ((error) => console.log(error));
+  }, [auth, navigate]);
 
   return (
     <>
       <DestinationContext.Provider value={{ destinations, setDestinations }}>
-        <BrowserRouter>
-
-        <Navbar/>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route
-              path="/destination/:idFromPath"
-              element={<DestinationDetails />}
-            ></Route>
-            <Route path="/create-destination" element={<CreateDestination/>}></Route>
-            <Route path="/edit-destination/:idFromPath" element={<CreateDestination/>}></Route>
-           </Routes>
-        </BrowserRouter>
+        <AuthContext.Provider value={{auth, setAuth}}>
+         
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route
+                path="/destination/:idFromPath"
+                element={<DestinationDetails />}
+              ></Route>
+              <Route
+                path="/create-destination"
+                element={<CreateDestination />}
+              ></Route>
+              <Route
+                path="/edit-destination/:idFromPath"
+                element={<CreateDestination />}
+              ></Route>
+              <Route path="/register" element={<Register></Register>}></Route>
+              <Route path="/login" element={<Login></Login>}></Route>
+            </Routes>
+        </AuthContext.Provider>
       </DestinationContext.Provider>
     </>
   );

@@ -9,13 +9,15 @@ import { useState, useContext } from "react";
 
 export default function Home () {
     const [searchTerm, setSearchTerm] = useState("");
-    const { setDestinations } = useContext(DestinationContext); 
+    const { destinations } = useContext(DestinationContext); 
 
     function onSearchChange(_searchTerm) {
       setSearchTerm(_searchTerm);
     }
 
-
+if (!destinations?.length) {
+  return <h1> There are no destinations yet!</h1>
+}
     return (
         <>
                 <Search onSearchChange={onSearchChange} />

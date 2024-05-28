@@ -9,7 +9,6 @@ import { DestinationContext } from "../App";
 
 function Carousel() {
   const {destinations} = useContext(DestinationContext);
-
   const trendingDestinations = destinations.filter(({trending})=> trending);
 
   return (

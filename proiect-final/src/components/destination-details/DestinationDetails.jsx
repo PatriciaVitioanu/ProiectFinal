@@ -1,19 +1,16 @@
 import { useParams, useNavigate } from "react-router-dom";
 
 import './DestinationDetails.css';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { DestinationContext } from "../../App";
+import { retrieveDestinations } from "../../library/destinations";
 
-async function retrieveDestinations(setDestinations, destinationId){
-    const response = await fetch (`http://localhost:3000/destinations/${destinationId}`);
-    const destination = await response.json();
-
-    setDestination (destination);
-}
 
  export default function DestinationDetails (){
     const[destination, setDestination]=useState({});
     const { idFromPath } = useParams();
     const navigate = useNavigate();
+    const { destinations, setDestinations } = useContext(DestinationContext);
 
     useEffect(() => {
       retrieveDestinations(setDestination, idFromPath);
@@ -39,7 +36,13 @@ if (!destination) {
     if (userConfirmedAction){
         fetch(`http://localhost:3000/destinations/${id}`, {
             method: "DELETE"
-        }).then(()=> navigate('/'));
+        }).then(()=> {
+            //const updatedDestinations = destinations.filter((destination) => destination.id !== id);
+            //setDestinations()
+            retrieveDestinations(setDestinations);
+            
+            navigate('/');
+            });
     }
 }
 
