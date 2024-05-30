@@ -5,6 +5,9 @@ import { useContext } from "react";
 
 export default function CreateDestination() {
   const navigate = useNavigate();
+  if (!localStorage.getItem("authToken")){
+    navigate("/login")
+  }
   const { destinations } = useContext(DestinationContext);
   const { idFromPath } = useParams();
   const selectedDestination = destinations.find((destination) => destination.id === idFromPath);

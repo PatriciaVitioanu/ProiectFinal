@@ -1,68 +1,82 @@
 import { useParams, useNavigate } from "react-router-dom";
 
-import './DestinationDetails.css';
+import "./DestinationDetails.css";
 import { useContext, useEffect, useState } from "react";
 import { DestinationContext } from "../../App";
-import { retrieveDestinations } from "../../library/destinations";
+import { AuthContext } from "../../App";
 
+async function retrieveDestination(setDestination, destinationId) {
+  const response = await fetch(
+    `http://localhost:3000/destinations/${destinationId}`
+  );
+  const destination = await response.json();
 
- export default function DestinationDetails (){
-    const[destination, setDestination]=useState({});
-    const { idFromPath } = useParams();
-    const navigate = useNavigate();
-    const { destinations, setDestinations } = useContext(DestinationContext);
-
-    useEffect(() => {
-      retrieveDestinations(setDestination, idFromPath);
-    }, []);
-
-    useEffect(() => {
-if (!destination) {
-    navigate ('/');
+  setDestination(destination);
 }
 
-},[destination])
+export default function DestinationDetails() {
+  const {auth} = useContext(AuthContext);
 
-    if(!destination){
-        return;
+  const [destination, setDestination] = useState({});
+  const { idFromPath } = useParams();
+  const navigate = useNavigate();
+  const { setDestinations } = useContext(DestinationContext);
+
+  useEffect(() => {
+    retrieveDestination(setDestination, idFromPath);
+  }, [idFromPath]);
+
+  useEffect(() => {
+    if (!destination) {
+      navigate("/");
     }
+  }, [destination, navigate]);
 
-    const { title, imageUrl, continent, id } = destination;
+  if (!destination) {
+    return;
+  }
 
+  const { id, title, imageUrl, continent } = destination;
 
-    function deleteDestination(){
-    const userConfirmedAction = confirm('Are you sure you want to delete the destination?')
-        
-    if (userConfirmedAction){
-        fetch(`http://localhost:3000/destinations/${id}`, {
-            method: "DELETE"
-        }).then(()=> {
-            //const updatedDestinations = destinations.filter((destination) => destination.id !== id);
-            //setDestinations()
-            retrieveDestinations(setDestinations);
-            
-            navigate('/');
-            });
-    }
-}
-
-    function editDestination () {
-        navigate (`/edit-destination/${id}`)
-    }
-
-
-    return (
-        <section>
-            <header>
-                <h3> {title} </h3>
-            </header>
-
-            <img src={imageUrl}/>
-
-            <p className="destination-details__continent"> Continent: {continent} </p>
-
-            <button onClick={deleteDestination}>Delete destination</button>
-            <button onClick={editDestination}>Edit destination</button>
-        </section>
+  function deleteDestination() {
+    const userConfirmedAction = confirm(
+      "Are you sure you want to delete the destination?"
     );
+
+    if (userConfirmedAction) {
+      fetch(`http://localhost:3000/destinations/${id}`, {
+        method: "DELETE",
+      }).then(() => {
+        //const updatedDestinations = destinations.filter((destination) => destination.id !== id);
+        //setDestinations()
+        retrieveDestination(setDestinations);
+
+        navigate("/");
+      });
+    }
+  }
+
+  function editDestination() {
+    navigate(`/edit-destination/${id}`);
+  }
+
+  return (
+    <section>
+      <header>
+        <h3> {title} </h3>
+      </header>
+
+      <img src={imageUrl} />
+
+      <p className="destination-details__continent"> Continent: {continent} </p>
+      {auth ? (
+        <>
+          <button onClick={deleteDestination}>Delete destination</button>
+          <button onClick={editDestination}>Edit destination</button>
+        </>
+      ) : (
+        ""
+      )}
+    </section>
+  );
 }

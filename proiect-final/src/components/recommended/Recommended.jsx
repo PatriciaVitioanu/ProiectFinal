@@ -1,6 +1,6 @@
 
 import "./Recommended.css";
-import DestinationCard from "../DestinationCard";
+import DestinationCard from "../destination-card/DestinationCard";
 
 import PropTypes from "prop-types";
 

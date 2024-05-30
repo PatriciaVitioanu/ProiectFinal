@@ -1,5 +1,5 @@
 import Search from "../search/Search";
-import Carousel from "../Carousel";
+import Carousel from "../carousel/Carousel";
 import Recommended from "../recommended/Recommended";
 import { DestinationContext } from "../../App";
 

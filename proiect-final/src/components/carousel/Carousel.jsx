@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import DestinationCard from "./DestinationCard";
+import DestinationCard from "../destination-card/DestinationCard";
 
 import "./Carousel.css";
 
 import PropTypes from 'prop-types';
-import { DestinationContext } from "../App";
+import { DestinationContext } from "../../App";
 
 function Carousel() {
   const {destinations} = useContext(DestinationContext);
