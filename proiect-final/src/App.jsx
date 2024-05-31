@@ -8,7 +8,7 @@ import "./App.css";
 import {Routes, Route, useNavigate } from "react-router-dom";
 import CreateDestination from "./components/create-destination/CreateDestination";
 import { retrieveDestinations } from "./library/destinations";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import { Register } from "./components/auth/register/Register";
 import Login from "./components/auth/login/Login";
 import EditUser from "./components/auth/edit-user/EditUser";

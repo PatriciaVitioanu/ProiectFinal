@@ -1,18 +1,25 @@
 .search-container {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
   }
   
 .search-icon {
-    position: absolute;
-    fill: grey ;
-    padding-left: 10px;
-    padding-top: 10px;
+    position: relative;
+    fill: grey;
+    align-self: center ;
+    left: 25px;
+    /*padding-left: 30px; */
+    /* padding-right: 430px; */
+    padding-top: 3px;
+    pointer-events: none;
   }
   
   .search {
     padding-left: 30px;
     width: 400px;
-    border: 3px solid grey;
+    border: 3px solid rgb(191, 187, 187);
     border-radius: 10px;
     height: 30px;
     outline: 0;
