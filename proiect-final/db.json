@@ -5,6 +5,13 @@
       "password": "$2a$10$HBkAw6fnUHN83wnOKH1TO.NZKsP4drN/Cl6lzqj/tmGnTihiHZXuG",
       "username": "Hello",
       "id": 1
+    },
+    {
+      "email": "patriciavitioanu@gmail.com",
+      "firstName": "Patricia elena",
+      "lastName": "Vitioanu",
+      "password": "$2a$10$Rl0FSk9iQju7ZCW8Q8ZtJOUG2WzdlNyPkfYT5IfQOWLpctk.xx3WO",
+      "id": 2
     }
   ],
   "destinations": [
@@ -19,14 +26,12 @@
       "trending": false
     },
     {
-      "id": "e432db34-0587-4df8-a3d0-fb784272f2a4",
       "title": "Japan",
       "imageUrl": "https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg",
-      "year": 2024,
-      "season": "Autumn",
-      "continent": "Asia",
-      "bookmark": false,
-      "trending": true
+      "year": "2024",
+      "season": "spring",
+      "continent": "europa",
+      "id": "e432db34-0587-4df8-a3d0-fb784272f2a4"
     },
     {
       "id": "d804245e-b539-4917-9fbd-96ccd951c8e6",

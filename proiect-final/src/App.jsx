@@ -11,6 +11,8 @@ import { retrieveDestinations } from "./library/destinations";
 import Navbar from "./components/Navbar";
 import { Register } from "./components/auth/register/Register";
 import Login from "./components/auth/login/Login";
+import EditUser from "./components/auth/edit-user/EditUser";
+
 
 export const DestinationContext = React.createContext();
 export const AuthContext = React.createContext();
@@ -48,6 +50,7 @@ function App() {
               ></Route>
               <Route path="/register" element={<Register></Register>}></Route>
               <Route path="/login" element={<Login></Login>}></Route>
+              <Route path="/edit-user/:idFromPath" element={<EditUser></EditUser>}></Route>
             </Routes>
         </AuthContext.Provider>
       </DestinationContext.Provider>

@@ -34,6 +34,8 @@ export default function Login() {
 
     if (response.ok) {
       localStorage.setItem("accessToken", body.accessToken);
+      console.log(body.accessToken);
+      localStorage.setItem("userId", body.user.id);
       setAuth(body.accessToken);
       navigate("/");
     }

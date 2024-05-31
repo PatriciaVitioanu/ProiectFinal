@@ -5,16 +5,19 @@ import { useContext } from "react";
 
 export default function CreateDestination() {
   const navigate = useNavigate();
-  if (!localStorage.getItem("authToken")){
-    navigate("/login")
+  if (!localStorage.getItem("accessToken")) {
+    navigate("/login");
   }
+  const accessToken = localStorage.getItem("accessToken");
   const { destinations } = useContext(DestinationContext);
   const { idFromPath } = useParams();
-  const selectedDestination = destinations.find((destination) => destination.id === idFromPath);
+  const selectedDestination = destinations.find(
+    (destination) => destination.id === idFromPath
+  );
 
   function saveDestination(event) {
     event.preventDefault();
-    const formElement = event.targer;
+    const formElement = event.target;
 
     const { title, url, year, season, continent } = formElement;
 
@@ -26,29 +29,32 @@ export default function CreateDestination() {
       continent: continent.value,
     };
 
-
-    fetch("http://localhost:3000/destinations", {
-      method: "POST",
-      body: JSON.stringify(destination),
-    }).then(() => navigate('/'));
-
     formElement.reset();
     if (idFromPath) {
-        fetch(`http://localhost:3000/destinations/${idFromPath}`, {
-          method: "PUT",
-          body: JSON.stringify(destination),
-        })
-        .then(() => console.log('movie was modified!'))
-      } else {
-        fetch("http://localhost:3000/destinations", {
-          method: "POST",
-          body: JSON.stringify(destination),
-        }).then(() => navigate('/'));
-  
-        formElement.reset();
-      }
-    }
+      fetch(`http://localhost:3000/destinations/${idFromPath}`, {
+        method: "PUT",
+        body: JSON.stringify(destination),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }).then(() => {
+        console.log("movie was modified!");
+        navigate("/");
+      });
+    } else {
+      fetch("http://localhost:3000/destinations", {
+        method: "POST",
+        body: JSON.stringify(destination),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }).then(() => navigate("/"));
 
+      formElement.reset();
+    }
+  }
 
   return (
     <form onSubmit={saveDestination}>
@@ -91,12 +97,11 @@ export default function CreateDestination() {
 
       <fieldset>
         <label htmlFor="season">Season</label>
-        <select name="season" id="season"required/>
-        <select 
-        name="season"
-        id="season" 
-        required
-        defaultValue={selectedDestination?.season}
+        <select
+          name="season"
+          id="season"
+          required
+          defaultValue={selectedDestination?.season}
         >
           <option disabled>Select one</option>
           <option value="spring">Spring</option>
@@ -108,12 +113,12 @@ export default function CreateDestination() {
 
       <fieldset>
         <label htmlFor="continent">Continent</label>
-        <select name="continent" id="continent" required/>
-        <select 
-        name="continent"
-        id="continent" 
-        required 
-        defaultValue={selectedDestination?.continent}>
+        <select
+          name="continent"
+          id="continent"
+          required
+          defaultValue={selectedDestination?.continent}
+        >
           <option disabled>Select one</option>
           <option value="europa">Europa</option>
           <option value="asia">Asia</option>
@@ -129,4 +134,3 @@ export default function CreateDestination() {
     </form>
   );
 }
-

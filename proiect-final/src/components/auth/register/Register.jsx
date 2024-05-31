@@ -6,7 +6,7 @@ export function Register() {
         event.preventDefault();
     
     const formElement = event.target;
-    const{ email, username, password, reTypePassword} = formElement;
+    const{ email, firstName, lastName, password, reTypePassword} = formElement;
 
 if (password.value !== reTypePassword.value) {
     console.warn("Passwords don't match");
@@ -15,7 +15,8 @@ if (password.value !== reTypePassword.value) {
 
 const user = {
     email: email.value,
-    username: username.value, 
+    firstName: firstName.value, 
+    lastName: lastName.value,
     password: password.value, 
 };
 
@@ -31,9 +32,16 @@ fetch ("http://localhost:3000/register", {
     return (
         <form onSubmit={register}>
             <filedset>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="firstName">First name:</label>
                 <div>
-                <input type="text" id="username" name="username"/>
+                <input type="text" id="firstName" name="firstName"/>
+                </div>
+            </filedset>
+
+            <filedset>
+                <label htmlFor="lastName">Last name:</label>
+                <div>
+                <input type="text" id="lastName" name="lastName"/>
                 </div>
             </filedset>
 

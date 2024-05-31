@@ -5,13 +5,22 @@ import { AuthContext } from "../App";
 function Navbar() {
   const { auth, setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
-
+  const storedUserId = localStorage.getItem("userId");
+  
   function logout() {
     localStorage.removeItem("accessToken");
+    localStorage.removeItem("userId");
     setAuth("");
     navigate("login");
   }
+
+  function editUser() {
+    navigate(`/edit-user/${storedUserId}`);
+  }
+
   return (
+    <header>
+      <h3> Logo </h3>
     <nav>
       <ul>
         <li>
@@ -23,6 +32,7 @@ function Navbar() {
             <li>
               <Link to="/create-destination">Create destination</Link>
             </li>
+            <li onClick={editUser}>Edit user</li>
           </>
         ) : (
           <><li>
@@ -33,6 +43,7 @@ function Navbar() {
         )}
       </ul>
     </nav>
+    </header>
   );
 }
 
