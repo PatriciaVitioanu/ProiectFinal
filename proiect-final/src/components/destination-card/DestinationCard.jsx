@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-
 import "./DestinationCard.css";
 
 function DestinationCard({ destinationElement, large = false }) {

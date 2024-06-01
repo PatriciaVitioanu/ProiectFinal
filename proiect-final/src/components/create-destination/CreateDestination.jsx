@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./CreateDestination.css";
 import { DestinationContext } from "../../App";
 import { useContext } from "react";
+import "./CreateDestination.css"
 
 export default function CreateDestination() {
   const navigate = useNavigate();
@@ -57,9 +58,10 @@ export default function CreateDestination() {
   }
 
   return (
-    <form onSubmit={saveDestination}>
-      <fieldset>
-        <label htmlFor="title">Title</label>
+    <form onSubmit={saveDestination} className="create-destination">
+       <p>Complete the fileds with lovely destinations:</p>
+      <div className="destination-row">
+        <label htmlFor="title" className="destination-label"></label>
         <input
           name="title"
           className="form-input"
@@ -68,11 +70,12 @@ export default function CreateDestination() {
           required
           minLength={5}
           defaultValue={selectedDestination?.title}
+          placeholder="Title"
         />
-      </fieldset>
+      </div>
 
-      <fieldset>
-        <label htmlFor="imgUrl">Image Url:</label>
+      <div className="destination-row">
+        <label htmlFor="imgUrl"className="destination-label"></label>
         <input
           name="url"
           className="form-input"
@@ -80,11 +83,12 @@ export default function CreateDestination() {
           id="imgUrl"
           required
           defaultValue={selectedDestination?.imageUrl}
+          placeholder="Image Url"
         />
-      </fieldset>
+      </div>
 
-      <fieldset>
-        <label htmlFor="year">Year</label>
+      <div className="destination-row">
+        <label htmlFor="year"className="destination-label"></label>
         <input
           name="year"
           className="form-input"
@@ -92,16 +96,19 @@ export default function CreateDestination() {
           id="year"
           required
           defaultValue={selectedDestination?.year}
+          placeholder="Year"
         />
-      </fieldset>
+      </div>
 
-      <fieldset>
-        <label htmlFor="season">Season</label>
+      <div className="destination-row">
+        <label htmlFor="season"className="destination-label"></label>
         <select
           name="season"
           id="season"
           required
           defaultValue={selectedDestination?.season}
+          className="destination-select"
+          
         >
           <option disabled>Select one</option>
           <option value="spring">Spring</option>
@@ -109,15 +116,16 @@ export default function CreateDestination() {
           <option value="autumn">Autumn</option>
           <option value="winter">Winter</option>
         </select>
-      </fieldset>
+      </div>
 
-      <fieldset>
-        <label htmlFor="continent">Continent</label>
+      <div className="destination-row">
+        <label htmlFor="continent"className="destination-label"></label>
         <select
           name="continent"
           id="continent"
           required
           defaultValue={selectedDestination?.continent}
+          className="destination-select"
         >
           <option disabled>Select one</option>
           <option value="europa">Europa</option>
@@ -128,9 +136,9 @@ export default function CreateDestination() {
           <option value="australia">Australia</option>
           <option value="antarctica">Antarctica</option>
         </select>
-      </fieldset>
+      </div>
 
-      <button>Save destination</button>
+      <button className="destination-button">Save destination</button>
     </form>
   );
 }

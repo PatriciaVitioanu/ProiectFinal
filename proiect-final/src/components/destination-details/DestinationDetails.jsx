@@ -47,8 +47,6 @@ export default function DestinationDetails() {
       fetch(`http://localhost:3000/destinations/${id}`, {
         method: "DELETE",
       }).then(() => {
-        //const updatedDestinations = destinations.filter((destination) => destination.id !== id);
-        //setDestinations()
         retrieveDestination(setDestinations);
 
         navigate("/");

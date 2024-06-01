@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../App";
+import "./Login.css";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -42,24 +43,26 @@ export default function Login() {
   }
 
   return (
-    <form onSubmit={login}>
-      {error ? <p className="error">{error}</p> : ""}
-
-      <filedset>
-        <label htmlFor="email">Email:</label>
-        <div>
-          <input type="email" id="email" name="email" />
+    <>
+      <form onSubmit={login} className="login">
+        {error ? <p className="error">{error}</p> : ""}
+        <label htmlFor="email"></label>
+        <div className="row">
+          <input type="email" id="email" name="email" placeholder="Email" />
         </div>
-      </filedset>
 
-      <filedset>
-        <label htmlFor="password">Password:</label>
-        <div>
-          <input type="password" id="password" name="password" />
+        <label htmlFor="password"></label>
+        <div className="row">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
         </div>
-      </filedset>
 
-      <button>Login</button>
-    </form>
+        <button className="login-button">Login</button>
+      </form>
+    </>
   );
 }

@@ -1,12 +1,13 @@
 import { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../App";
+import "./EditUser.css"
 
 async function fetchUser(setUser, userId, auth) {
   const response = await fetch(`http://localhost:3000/users/${userId}`, {
     headers: {
-      "Authorization": `Bearer ${auth}`
-    }
+      Authorization: `Bearer ${auth}`,
+    },
   });
   const userData = await response.json();
   setUser(userData);
@@ -18,8 +19,8 @@ export default function EditUser() {
   const { idFromPath } = useParams();
   const [user, setUser] = useState({});
 
-  if (!auth){
-    navigate("/login")
+  if (!auth) {
+    navigate("/login");
   }
 
   fetchUser(setUser, idFromPath, auth);
@@ -28,9 +29,10 @@ export default function EditUser() {
     event.preventDefault();
 
     const formElement = event.target;
-    const { email, firstName, lastName, password, reTypePassword } = formElement;
+    const { email, firstName, lastName, password, reTypePassword } =
+      formElement;
     console.log(firstName.value, lastName.value);
-    
+
     if (password.value !== reTypePassword.value) {
       console.log("Passwords don't match");
       return;
@@ -46,8 +48,8 @@ export default function EditUser() {
     await fetch(`http://localhost:3000/users/${idFromPath}`, {
       method: "PUT",
       headers: {
-        "Content-Type": 'application/json',
-        "Authorization": `Bearer ${auth}`
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${auth}`,
       },
       body: JSON.stringify(updatedUser),
     });
@@ -56,58 +58,43 @@ export default function EditUser() {
   }
 
   return (
-    <form onSubmit={editUser}>
-      <fieldset>
-        <label htmlFor="firstName">First name:</label>
-        <div>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            defaultValue={user.firstName}
-          />
-        </div>
-      </fieldset>
+    <form onSubmit={editUser} className="edit-user">
+      <label htmlFor="firstName">First name:</label>
+      <div className="edit-row">
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          defaultValue={user.firstName}
+        />
+      </div>
 
-      <fieldset>
-        <label htmlFor="lastName">Last name:</label>
-        <div>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            defaultValue={user.lastName}
-          />
-        </div>
-      </fieldset>
+      <label htmlFor="lastName">Last name:</label>
+      <div className="edit-row">
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          defaultValue={user.lastName}
+        />
+      </div>
 
-      <fieldset>
-        <label htmlFor="email">Email:</label>
-        <div>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            defaultValue={user.email}
-          />
-        </div>
-      </fieldset>
+      <label htmlFor="email">Email:</label>
+      <div className="edit-row">
+        <input type="email" id="email" name="email" defaultValue={user.email} />
+      </div>
 
-      <fieldset>
-        <label htmlFor="password">Password:</label>
-        <div>
-          <input type="password" id="password" name="password" />
-        </div>
-      </fieldset>
+      <label htmlFor="password"></label>
+      <div className="edit-row">
+        <input type="password" id="password" name="password" placeholder="Password"/>
+      </div>
 
-      <fieldset>
-        <label htmlFor="reTypePassword">Re type password:</label>
-        <div>
-          <input type="password" id="reTypePassword" name="reTypePassword" />
-        </div>
-      </fieldset>
+      <label htmlFor="reTypePassword"></label>
+      <div className="edit-row">
+        <input type="password" id="reTypePassword" name="reTypePassword" placeholder="Re type password" />
+      </div>
 
-      <button type="submit">Save Changes</button>
+      <button type="submit" className="edit-button">Save Changes</button>
     </form>
   );
 }

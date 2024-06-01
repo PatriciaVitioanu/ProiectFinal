@@ -3,7 +3,6 @@
 * {
   padding: 0px;
   margin: 0px;
-  font-family: "Lato", sans-serif;
 }
 
 h3 {
@@ -20,9 +19,10 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   padding: 0 2rem;
-  background-image: linear-gradient(rgb(50, 143, 183), white);
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  font-family: "Roboto", sans-serif;
 
 }
 
@@ -82,12 +82,12 @@ nav a:hover {
   }
 
   .hide-body-content {
-    overflow: clip; /* Prevent scrolling */
+    overflow: clip; 
     transition-delay: 1s;
   }
   
   .hide-body-content > #root >*:not(.nav-header, nav) {
-    display: none; /* Hide all direct children of body except the navbar */
+    display: none; 
     
   }
 }
