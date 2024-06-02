@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../App";
 import "./EditUser.css"
@@ -23,7 +23,9 @@ export default function EditUser() {
     navigate("/login");
   }
 
-  fetchUser(setUser, idFromPath, auth);
+  useEffect(() => {
+    fetchUser(setUser, idFromPath, auth);
+  }, [idFromPath, auth]);
 
   async function editUser(event) {
     event.preventDefault();
@@ -31,10 +33,9 @@ export default function EditUser() {
     const formElement = event.target;
     const { email, firstName, lastName, password, reTypePassword } =
       formElement;
-    console.log(firstName.value, lastName.value);
 
     if (password.value !== reTypePassword.value) {
-      console.log("Passwords don't match");
+      alert('Passwords dont match!');
       return;
     }
 
@@ -52,6 +53,9 @@ export default function EditUser() {
         Authorization: `Bearer ${auth}`,
       },
       body: JSON.stringify(updatedUser),
+    }).then(response => {
+      if(!response.ok)
+        alert('Wrong password!');
     });
 
     navigate("/");
@@ -86,12 +90,12 @@ export default function EditUser() {
 
       <label htmlFor="password"></label>
       <div className="edit-row">
-        <input type="password" id="password" name="password" placeholder="Password"/>
+        <input type="password" id="password" name="password" placeholder="Password" required/>
       </div>
 
       <label htmlFor="reTypePassword"></label>
       <div className="edit-row">
-        <input type="password" id="reTypePassword" name="reTypePassword" placeholder="Re type password" />
+        <input type="password" id="reTypePassword" name="reTypePassword" placeholder="Re type password" required/>
       </div>
 
       <button type="submit" className="edit-button">Save Changes</button>

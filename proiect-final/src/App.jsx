@@ -49,11 +49,11 @@ function App() {
                 path="/edit-destination/:idFromPath"
                 element={<CreateDestination />}
               ></Route>
-              <Route path="/register" element={<Register></Register>}></Route>
-              <Route path="/login" element={<Login></Login>}></Route>
-              <Route path="/edit-user/:idFromPath" element={<EditUser></EditUser>}></Route>
-              <Route path="/about-me" element={<AboutMe></AboutMe>}></Route>
-              <Route path="/contact-me" element={<ContactMe></ContactMe>}></Route>
+              <Route path="/register" element={<Register/>}/>
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/edit-user/:idFromPath" element={<EditUser/>}/>
+              <Route path="/about-me" element={<AboutMe/>}/>
+              <Route path="/contact-me" element={<ContactMe/>}/>
             </Routes>
         </AuthContext.Provider>
       </DestinationContext.Provider>

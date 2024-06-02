@@ -82,7 +82,7 @@ export function Register() {
           id="reTypepassword"
           name="reTypePassword"
           
-          placeholder="Re type password"
+          placeholder="Confirm password"
         />
       </div>
 

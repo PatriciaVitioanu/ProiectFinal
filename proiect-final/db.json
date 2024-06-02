@@ -8,9 +8,9 @@
     },
     {
       "email": "patriciavitioanu@gmail.com",
-      "firstName": "Patricia elena",
+      "firstName": "Patricia",
       "lastName": "Vitioanu",
-      "password": "$2a$10$Rl0FSk9iQju7ZCW8Q8ZtJOUG2WzdlNyPkfYT5IfQOWLpctk.xx3WO",
+      "password": "$2a$10$bFmql74D7LiZ.yEvusNVwuVb71aRFEVosYwhH8nXIFqsX2n5OZlN.",
       "id": 2
     }
   ],
@@ -22,16 +22,17 @@
       "year": 2024,
       "season": "Summer",
       "continent": "Europa",
-      "bookmark": false,
-      "trending": false
+      "trending": false,
+      "description": "Embark on an unforgettable journey through the Canary Islands, beginning with your arrival in Tenerife, where you'll settle into a luxurious seaside hotel in Costa Adeje. Dive into adventure at Siam Park, then unwind on the golden sands of Los Cristianos. Ascend Mount Teide by cable car for breathtaking views and stargazing. Explore the charming streets of La Laguna and the verdant trails of Anaga Rural Park. After soaking in the northern beauty of Tenerife, ferry over to Gran Canaria and immerse yourself in the vibrant history of Las Palmas. Stroll through the old town of Vegueta, bask in the sun at Las Canteras Beach, and savor the island's nightlife. Conclude your tour with a scenic drive to Maspalomas, where the vast dunes and tranquil beach await your exploration, leaving you with cherished memories of your Canary Islands adventure."
     },
     {
       "title": "Japan",
       "imageUrl": "https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg",
       "year": "2024",
-      "season": "spring",
-      "continent": "europa",
-      "id": "e432db34-0587-4df8-a3d0-fb784272f2a4"
+      "season": "Spring",
+      "continent": "Asia",
+      "id": "e432db34-0587-4df8-a3d0-fb784272f2a4",
+      "description": "Embark on an enchanting journey through Japan, starting with your arrival in Tokyo, where you'll check into a sleek city hotel in Shinjuku. Immerse yourself in the vibrant energy of Shibuya Crossing, explore the historic Meiji Shrine, and indulge in local delicacies at Tsukiji Outer Market. Spend a day visiting the serene temples and traditional streets of Asakusa, followed by a tranquil boat ride along the Sumida River. Take a scenic train ride to Kyoto, the heart of Japan's cultural heritage, and stay in a traditional ryokan. Wander through the mesmerizing bamboo groves of Arashiyama, visit the iconic Fushimi Inari Shrine, and marvel at the golden splendor of Kinkaku-ji. From Kyoto, take a day trip to Nara to feed the friendly deer and explore Todai-ji Temple. Next, head to Hiroshima to pay your respects at the Peace Memorial Park and take a short ferry ride to the sacred island of Miyajima, home to the stunning Itsukushima Shrine. Conclude your tour in Osaka, renowned for its vibrant street food scene, and explore the futuristic marvels of Umeda Sky Building. As your Japanese adventure draws to a close, reflect on the rich cultural tapestry and unforgettable experiences that make Japan a truly unique destination."
     },
     {
       "id": "d804245e-b539-4917-9fbd-96ccd951c8e6",
@@ -40,8 +41,8 @@
       "year": 2025,
       "season": "Autumn",
       "continent": "Afirca",
-      "bookmark": false,
-      "trending": true
+      "trending": true,
+      "description": "Embark on a captivating journey through Tanzania, starting with your arrival in Arusha, the gateway to some of Africa's most renowned national parks. Settle into a cozy lodge and spend your first evening relaxing and preparing for the adventures ahead. Begin your safari with a visit to Tarangire National Park, known for its large elephant herds and majestic baobab trees. Spend the night in a comfortable tented camp under the African sky. Continue your journey to the Serengeti, where you'll witness the incredible wildlife and possibly the Great Migration, staying in a luxurious safari lodge amidst the vast plains. Head to Ngorongoro Crater, a UNESCO World Heritage Site, and marvel at the diverse ecosystems within this massive caldera, home to an abundance of wildlife. Spend a night at a lodge on the crater rim, soaking in the breathtaking views. From the wildlife-rich landscapes, fly to the tropical paradise of Zanzibar. In Stone Town, a UNESCO World Heritage Site, wander through narrow streets filled with history and culture, visit the vibrant markets, and savor the local cuisine. Move to the island's stunning beaches, where you can relax on the white sands, snorkel in crystal-clear waters, and enjoy the serene Indian Ocean. Take a day to explore Jozani Forest, home to the endemic red colobus monkey, and the Spice Farms, where you can learn about the island's spice trade history. Conclude your Tanzanian adventure with a sunset dhow cruise, reflecting on the diverse experiences and unforgettable moments that make this journey truly extraordinary."
     },
     {
       "id": "57b84793-8206-4633-8541-abd120a86bd0",
@@ -50,17 +51,17 @@
       "year": 2025,
       "season": "Autumn",
       "continent": "Asia",
-      "bookmark": false
+      "description": "Embark on an unforgettable journey through South Korea with me as your guide. We'll start our adventure in Seoul, where the vibrant energy of the city awaits. From exploring ancient palaces and traditional neighborhoods to indulging in the bustling street food scene, Seoul offers a perfect blend of history, culture, and modernity. We'll take a poignant excursion to the Demilitarized Zone (DMZ) to gain insights into Korea's divided history and hopes for reunification. Moving south, we'll discover the historic treasures of Gyeongju, known as the museum without walls, and soak in the tranquility of its ancient temples and royal tombs. In Busan, we'll wander through colorful villages, feast on fresh seafood, and bask in the beauty of its beaches and mountains. Finally, we'll escape to the idyllic Jeju Island, exploring its volcanic landscapes, lush gardens, and pristine beaches. With each destination offering its own unique charm, our tour promises to be a journey filled with discovery, cultural immersion, and lasting memories."
     },
     {
-      "id": "bb59f169-742b-47d8-b739-09c96c106c26",
-      "title": "Philipines",
+      "title": "Phillipines",
+      "description": "Embark on an enchanting journey through the Philippines, where each island holds a unique treasure waiting to be discovered. We'll begin our adventure in Manila, the bustling capital, where we'll immerse ourselves in the rich history and vibrant culture of Intramuros, explore the lively markets of Quiapo, and indulge in delicious Filipino cuisine. From Manila, we'll fly to Palawan, hailed as the Last Frontier for its stunning natural beauty. Here, we'll explore the otherworldly landscapes of the Puerto Princesa Underground River, relax on pristine beaches in El Nido, and marvel at the enchanting lagoons and limestone cliffs of Coron. Next, we'll journey to the island of Bohol, where we'll encounter the iconic Chocolate Hills, visit the adorable tarsiers at the Tarsier Sanctuary, and cruise along the Loboc River. Continuing our exploration, we'll head to Cebu, known as the Queen City of the South, to admire the historic landmarks of Cebu City and dive into the underwater paradise of Moalboal or Malapascua. Our journey will conclude in Boracay, renowned for its powdery white sands and azure waters. Here, we'll unwind on the beach, indulge in thrilling water sports, and witness breathtaking sunsets that will leave an indelible mark on our memories. With its diverse landscapes, rich cultural heritage, and warm hospitality, the Philippines promises an unforgettable adventure filled with endless wonders.",
       "imageUrl": "https://i.natgeofe.com/n/04505c35-858b-4e95-a1a7-d72e5418b7fc/steep-karst-cliffs-of-el-nido-in-palawan_16x9.jpg",
-      "year": 2024,
-      "season": "Winter",
-      "continent": "Asia",
-      "bookmark": false,
-      "trending": true
+      "year": "2025",
+      "season": "autumn",
+      "continent": "asia",
+      "trending": true,
+      "id": "bb59f169-742b-47d8-b739-09c96c106c26"
     },
     {
       "id": "ad617845-0fe9-48ac-b3cc-a7248d8c5a53",
@@ -69,8 +70,8 @@
       "year": 2025,
       "season": "Winter",
       "continent": "America",
-      "bookmark": false,
-      "trending": false
+      "trending": false,
+      "description": "Embark on an awe-inspiring journey through the vast and diverse landscapes of Canada. We'll kick off our adventure in Vancouver, a city nestled between the Pacific Ocean and the Coast Mountains. Explore the vibrant neighborhoods of Gastown and Granville Island, then venture into the natural beauty of Stanley Park. From Vancouver, we'll journey eastward to the Canadian Rockies, where towering peaks and turquoise lakes await in Banff and Jasper National Parks. Take in the stunning vistas along the Icefields Parkway, hike to glacial viewpoints, and perhaps even spot some wildlife along the way. Next, we'll head to the cosmopolitan city of Toronto, where we'll marvel at the iconic CN Tower, stroll along the scenic waterfront, and explore the diverse culinary scene. Don't miss the opportunity to visit Niagara Falls, one of the world's most impressive natural wonders, just a short drive away. Continuing our journey, we'll explore the charming streets of Quebec City, a UNESCO World Heritage Site brimming with European charm and history. Wander through the cobblestone alleys of Old Quebec, admire the majestic Château Frontenac, and savor the flavors of French cuisine. Finally, we'll conclude our adventure in the vibrant metropolis of Montreal, where art, culture, and cuisine converge in a melting pot of influences. Explore the eclectic neighborhoods, sample local delicacies at the bustling markets, and soak up the lively atmosphere of this dynamic city. With its breathtaking landscapes, rich history, and vibrant cities, Canada promises an unforgettable journey filled with discovery and adventure."
     },
     {
       "id": "a94ecfeb-6698-40f8-8b55-733081ef4897",
@@ -79,7 +80,7 @@
       "year": 2024,
       "season": "Summer",
       "continent": "America",
-      "bookmark": false
+      "description": "Embark on a tropical escapade through the enchanting islands of Hawaii, where each moment is a postcard-worthy memory waiting to be captured. Our adventure begins on the island of Oahu, home to the vibrant city of Honolulu and the world-famous Waikiki Beach. Dive into the rich history of Pearl Harbor, explore the bustling streets of Chinatown, and hike to the summit of Diamond Head for panoramic views of the island. From Oahu, we'll journey to Maui, known for its stunning beaches, lush landscapes, and captivating sunsets. Drive the scenic Road to Hana, where waterfalls cascade into emerald pools and verdant rainforests beckon exploration. Don't miss the chance to witness the sunrise atop Haleakalā, the island's dormant volcano, or snorkel alongside colorful marine life at Molokini Crater. Next, we'll venture to the island of Hawaii, also known as the Big Island, where we'll witness the fiery spectacle of Kilauea Volcano in Hawaii Volcanoes National Park. Explore the dramatic landscapes of black sand beaches, lava fields, and lush valleys that make this island truly unique. Conclude our journey on the island of Kauai, aptly nicknamed the Garden Isle for its breathtaking natural beauty. Marvel at the towering sea cliffs of the Na Pali Coast, kayak along the Wailua River to the serene Fern Grotto, and hike through the scenic wonders of Waimea Canyon. As our Hawaiian adventure comes to an end, we'll cherish the memories of sun-kissed days, balmy nights, and the spirit of aloha that permeates these idyllic islands."
     },
     {
       "id": "6810e486-5c3a-41bd-9e10-4184c4f41aaf",
@@ -88,8 +89,8 @@
       "year": 2025,
       "season": "Summer",
       "continent": "Africa",
-      "bookmark": false,
-      "trending": true
+      "trending": true,
+      "description": "Embark on an extraordinary journey through the land of ancient wonders and timeless mysteries of Egypt. Our adventure begins in Cairo, where the bustling streets and iconic landmarks offer a glimpse into the country's rich history and vibrant culture. Explore the majestic pyramids of Giza, marvel at the enigmatic Sphinx, and delve into the treasures of the Egyptian Museum, home to artifacts spanning millennia. From Cairo, we'll cruise along the tranquil waters of the Nile River aboard a traditional felucca, witnessing daily life along the riverbanks and visiting the ancient temples and tombs that line its shores. Our journey will take us to Luxor, the world's largest open-air museum, where we'll explore the sprawling Karnak and Luxor Temples, as well as the Valley of the Kings, where pharaohs were laid to rest in elaborate underground tombs. Next, we'll journey to Aswan, a picturesque city nestled on the banks of the Nile, where we'll visit the magnificent temples of Abu Simbel and take a leisurely boat ride to the tranquil Philae Temple. Conclude our adventure with a relaxing stay in the coastal resort town of Sharm El Sheikh, where pristine beaches, vibrant coral reefs, and azure waters beckon relaxation and exploration. As we bid farewell to Egypt, we'll carry with us memories of ancient wonders, vibrant landscapes, and the enduring legacy of one of the world's greatest civilizations."
     },
     {
       "id": "766f7a42-af5f-4f15-a29b-addd16abf1a0",
@@ -98,8 +99,8 @@
       "year": 2026,
       "season": "Summer",
       "continent": "Australia",
-      "bookmark": false,
-      "trending": true
+      "trending": true,
+      "description": "Embark on an unforgettable journey through the diverse landscapes and vibrant cities of Australia, a land of breathtaking natural beauty and cultural richness. Our adventure begins in Sydney, where the iconic Sydney Opera House and Sydney Harbour Bridge welcome us to this cosmopolitan metropolis. Explore the picturesque shores of Bondi Beach, wander through the historic streets of The Rocks, and take a scenic ferry ride across the sparkling waters of Sydney Harbour. From Sydney, we'll venture into the heart of the Outback, where the vast expanses of the Red Centre stretch as far as the eye can see. Witness the majestic beauty of Uluru at sunrise and sunset, learn about the ancient indigenous culture of the region, and marvel at the striking landscapes of Kata Tjuta and Kings Canyon. Next, we'll journey to the tropical north of Queensland, where the Great Barrier Reef awaits with its dazzling array of marine life and coral formations. Snorkel or dive among vibrant coral gardens, relax on pristine island beaches, and explore the lush rainforests of the Daintree. Conclude our adventure in Melbourne, a dynamic city known for its eclectic arts scene, vibrant laneways, and world-class dining. Explore the charming neighborhoods of Fitzroy and St Kilda, visit the renowned street art of Hosier Lane, and take a scenic drive along the Great Ocean Road to witness the stunning limestone cliffs of the Twelve Apostles. As our journey comes to an end, we'll carry with us memories of the diverse landscapes, friendly locals, and unforgettable experiences that make Australia a truly remarkable destination."
     }
   ]
 }

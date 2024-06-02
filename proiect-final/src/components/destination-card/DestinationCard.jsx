@@ -5,17 +5,14 @@ function DestinationCard({ destinationElement, large = false }) {
   const { id, imageUrl, year, season, continent, title } = destinationElement;
 
   return (
-    <li
+    <span
       className={`destination ${
         large ? "destination--large" : "destination--small"
       }`}
       key={id}
     >
       <img className="destination__image" src={imageUrl} />
-      <div className="destination__bookmark">
-        <i className="destination__bookmark-icon"></i>
-      </div>
-
+   
       <div className="destination__info">
         <div>
           <span className="destination__year">{year}</span>
@@ -25,7 +22,7 @@ function DestinationCard({ destinationElement, large = false }) {
 
         <h3 className="destination__title">{title}</h3>
       </div>
-    </li>
+    </span>
   );
 }
 

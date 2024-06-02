@@ -23,12 +23,12 @@ function Recommended({ searchTerm }) {
 
   return (
     <section>
-      <header>
-        <h1> Recommended destinations for you</h1>
+      <header className="header-destinations">
+        <h1 className="recommended-destinations"> Recommended destinations for you</h1>
       </header>
 
       {destinationsNotFound ? (
-        <p> 404 No destination found.</p>
+        <p>No destination found!</p>
       ) : (
         <ul className="destination-list">
           {filteredDestinations.map((destinationItem) => (

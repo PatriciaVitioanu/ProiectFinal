@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./CreateDestination.css";
 import { DestinationContext } from "../../App";
 import { useContext } from "react";
-import "./CreateDestination.css"
+import "./CreateDestination.css";
 
 export default function CreateDestination() {
   const navigate = useNavigate();
@@ -20,10 +20,11 @@ export default function CreateDestination() {
     event.preventDefault();
     const formElement = event.target;
 
-    const { title, url, year, season, continent } = formElement;
+    const { title, url, year, season, continent, description } = formElement;
 
     const destination = {
       title: title.value,
+      description: description.value,
       imageUrl: url.value,
       year: year.value.substring(0, 4),
       season: season.value,
@@ -39,10 +40,7 @@ export default function CreateDestination() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${accessToken}`,
         },
-      }).then(() => {
-        console.log("movie was modified!");
-        navigate("/");
-      });
+      }).then(() => navigate("/"));
     } else {
       fetch("http://localhost:3000/destinations", {
         method: "POST",
@@ -51,7 +49,9 @@ export default function CreateDestination() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${accessToken}`,
         },
-      }).then(() => navigate("/"));
+      }).then(() => {navigate("/");
+        console.log('destination added')
+      })
 
       formElement.reset();
     }
@@ -59,7 +59,7 @@ export default function CreateDestination() {
 
   return (
     <form onSubmit={saveDestination} className="create-destination">
-       <p>Complete the fileds with lovely destinations:</p>
+      <p>Complete the fileds with lovely destinations:</p>
       <div className="destination-row">
         <label htmlFor="title" className="destination-label"></label>
         <input
@@ -75,7 +75,21 @@ export default function CreateDestination() {
       </div>
 
       <div className="destination-row">
-        <label htmlFor="imgUrl"className="destination-label"></label>
+        <label htmlFor="description" className="destination-label"></label>
+        <input
+          name="description"
+          className="form-input"
+          id="description"
+          type="text"
+          required
+          minLength={5}
+          defaultValue={selectedDestination?.description}
+          placeholder="Description"
+        />
+      </div>
+
+      <div className="destination-row">
+        <label htmlFor="imgUrl" className="destination-label"></label>
         <input
           name="url"
           className="form-input"
@@ -88,7 +102,7 @@ export default function CreateDestination() {
       </div>
 
       <div className="destination-row">
-        <label htmlFor="year"className="destination-label"></label>
+        <label htmlFor="year" className="destination-label"></label>
         <input
           name="year"
           className="form-input"
@@ -101,14 +115,13 @@ export default function CreateDestination() {
       </div>
 
       <div className="destination-row">
-        <label htmlFor="season"className="destination-label"></label>
+        <label htmlFor="season" className="destination-label"></label>
         <select
           name="season"
           id="season"
           required
           defaultValue={selectedDestination?.season}
           className="destination-select"
-          
         >
           <option disabled>Select one</option>
           <option value="spring">Spring</option>
@@ -119,7 +132,7 @@ export default function CreateDestination() {
       </div>
 
       <div className="destination-row">
-        <label htmlFor="continent"className="destination-label"></label>
+        <label htmlFor="continent" className="destination-label"></label>
         <select
           name="continent"
           id="continent"
