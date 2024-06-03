@@ -1,68 +1,67 @@
 .edit-user {
-    margin: 0;
-    padding: 0;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: small;
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: small;
 }
 
 .edit-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: #fff;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .edit-row input {
-    border: none;
-    outline: none;
-    flex: 1;
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  width: 100%;
+}
+
+.edit-button {
+  padding: 15px;
+  background-color: #f12711;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.edit-button:hover {
+  background-color: #ffb20b;
+  color: black;
+}
+
+@media (max-width: 600px) {
+  .login {
+    width: 100%;
+    max-width: 100%;
     padding: 10px;
-    width: 100%; 
+  }
+
+  .edit-row {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .edit-row input {
+    padding: 8px;
   }
 
   .edit-button {
-    padding: 15px;
-    background-color: #f12711;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
+    padding: 12px;
+    font-size: 14px;
   }
-
-  .edit-button:hover {
-    background-color: #ffb20b;
-    color: black
-  }
-
-  @media (max-width: 600px) {
-    .login {
-      width: 100%;
-      max-width: 100%;
-      padding: 10px;
-    }
-  
-    .edit-row {
-      flex-direction: column;
-      padding: 5px;
-    }
-  
-    .edit-row input {
-      padding: 8px;
-    }
-  
-    .edit-button {
-      padding: 12px;
-      font-size: 14px;
-    }
-  }
+}

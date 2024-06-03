@@ -29,13 +29,12 @@ span {
   margin-right: 0.5rem;
 }
 
-.destination__info{
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    transition: font-size 0.3s ease; 
+.destination__info {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  transition: font-size 0.3s ease;
 }
 
-
 .destination__info:hover {
-    font-size: 30px; 
+  font-size: 30px;
 }

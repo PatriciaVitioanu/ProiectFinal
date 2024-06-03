@@ -12,6 +12,13 @@
       "lastName": "Vitioanu",
       "password": "$2a$10$bFmql74D7LiZ.yEvusNVwuVb71aRFEVosYwhH8nXIFqsX2n5OZlN.",
       "id": 2
+    },
+    {
+      "email": "alin@gmail.com",
+      "password": "$2a$10$0J8mtG2ndZ2v4Bqgq0bcMuBwu7HJB51GzWn8sDwIOk6AOhGz.1Ppa",
+      "firstName": "Alin",
+      "lastName": "Popa",
+      "id": 3
     }
   ],
   "destinations": [

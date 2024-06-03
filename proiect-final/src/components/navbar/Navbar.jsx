@@ -34,8 +34,8 @@ function Navbar() {
     <header className="nav-header">
       <h3>ukiyo</h3>
       <nav ref={navRef}>
-      <Link to="/about-me">About me</Link>
-      <Link to="/contact-me">Contact</Link>
+        <Link to="/about-me">About me</Link>
+        <Link to="/contact-me">Contact</Link>
         <Link to="/">Destinations</Link>
         {auth ? (
           <>

@@ -12,7 +12,7 @@ function DestinationCard({ destinationElement, large = false }) {
       key={id}
     >
       <img className="destination__image" src={imageUrl} />
-   
+
       <div className="destination__info">
         <div>
           <span className="destination__year">{year}</span>

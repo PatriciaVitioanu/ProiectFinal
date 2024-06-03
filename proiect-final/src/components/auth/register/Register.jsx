@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import"./Register.css"
+import "./Register.css";
 
 export function Register() {
   const navigate = useNavigate();
@@ -55,13 +55,7 @@ export function Register() {
 
       <label htmlFor="email"></label>
       <div className="register-row">
-        <input
-          type="email"
-          id="email1"
-          name="email"
-          
-          placeholder="Email"
-        />
+        <input type="email" id="email1" name="email" placeholder="Email" />
       </div>
 
       <label htmlFor="password"></label>
@@ -70,7 +64,6 @@ export function Register() {
           type="password"
           id="password1"
           name="password"
-          
           placeholder="Password"
         />
       </div>
@@ -81,7 +74,6 @@ export function Register() {
           type="password"
           id="reTypepassword"
           name="reTypePassword"
-          
           placeholder="Confirm password"
         />
       </div>

@@ -28,10 +28,12 @@ const AboutMe = () => {
           </p>
           <br />
           <p className="p-site-name">
-            In Japanese, ukiyo (浮世) traditionally means floating world. <br /><br />
+            In Japanese, ukiyo (浮世) traditionally means floating world. <br />
+            <br />
             The concept of ukiyo reflects a focus on enjoying the fleeting,
             transient pleasures of life, often in contrast to the more somber
-            Buddhist idea of &quot;suffering world&quot; or &quot;transitory world.&quot;
+            Buddhist idea of &quot;suffering world&quot; or &quot;transitory
+            world.&quot;
           </p>
         </div>
         <div className="photo">

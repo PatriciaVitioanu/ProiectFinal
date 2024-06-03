@@ -49,9 +49,10 @@ export default function CreateDestination() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${accessToken}`,
         },
-      }).then(() => {navigate("/");
-        console.log('destination added')
-      })
+      }).then(() => {
+        navigate("/");
+        console.log("destination added");
+      });
 
       formElement.reset();
     }

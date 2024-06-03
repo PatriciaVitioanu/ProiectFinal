@@ -1,4 +1,3 @@
-
 import "./Recommended.css";
 import DestinationCard from "../destination-card/DestinationCard";
 
@@ -8,11 +7,8 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DestinationContext } from "../../App";
 
-
-
-
 function Recommended({ searchTerm }) {
-  const { destinations }= useContext(DestinationContext)
+  const { destinations } = useContext(DestinationContext);
 
   const filteredDestinations = destinations.filter(({ title }) =>
     title.toUpperCase().includes(searchTerm.toUpperCase())
@@ -20,11 +16,13 @@ function Recommended({ searchTerm }) {
 
   const destinationsNotFound = filteredDestinations.length === 0;
 
-
   return (
     <section>
       <header className="header-destinations">
-        <h1 className="recommended-destinations"> Recommended destinations for you</h1>
+        <h1 className="recommended-destinations">
+          {" "}
+          Recommended destinations for you
+        </h1>
       </header>
 
       {destinationsNotFound ? (
@@ -49,5 +47,5 @@ export default Recommended;
 
 Recommended.propTypes = {
   searchTerm: PropTypes.string,
-  destinations : PropTypes.any,
+  destinations: PropTypes.any,
 };

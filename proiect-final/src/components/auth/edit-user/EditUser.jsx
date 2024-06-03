@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../App";
-import "./EditUser.css"
+import "./EditUser.css";
 
 async function fetchUser(setUser, userId, auth) {
   const response = await fetch(`http://localhost:3000/users/${userId}`, {
@@ -35,7 +35,7 @@ export default function EditUser() {
       formElement;
 
     if (password.value !== reTypePassword.value) {
-      alert('Passwords dont match!');
+      alert("Passwords dont match!");
       return;
     }
 
@@ -53,9 +53,8 @@ export default function EditUser() {
         Authorization: `Bearer ${auth}`,
       },
       body: JSON.stringify(updatedUser),
-    }).then(response => {
-      if(!response.ok)
-        alert('Wrong password!');
+    }).then((response) => {
+      if (!response.ok) alert("Wrong password!");
     });
 
     navigate("/");
@@ -90,15 +89,29 @@ export default function EditUser() {
 
       <label htmlFor="password"></label>
       <div className="edit-row">
-        <input type="password" id="password" name="password" placeholder="Password" required/>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
       </div>
 
       <label htmlFor="reTypePassword"></label>
       <div className="edit-row">
-        <input type="password" id="reTypePassword" name="reTypePassword" placeholder="Re type password" required/>
+        <input
+          type="password"
+          id="reTypePassword"
+          name="reTypePassword"
+          placeholder="Re type password"
+          required
+        />
       </div>
 
-      <button type="submit" className="edit-button">Save Changes</button>
+      <button type="submit" className="edit-button">
+        Save Changes
+      </button>
     </form>
   );
 }
