@@ -12,8 +12,9 @@ import Navbar from "./components/navbar/Navbar";
 import { Register } from "./components/auth/register/Register";
 import Login from "./components/auth/login/Login";
 import EditUser from "./components/auth/edit-user/EditUser";
-import AboutMe from "./components/about-me/AboutMe";
+
 import ContactMe from "./components/contact-me/ContactMe";
+import HomePage from "./components/about-us/home";
 
 export const DestinationContext = React.createContext();
 export const AuthContext = React.createContext();
@@ -52,8 +53,9 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/edit-user/:idFromPath" element={<EditUser />} />
-            <Route path="/about-me" element={<AboutMe />} />
+            
             <Route path="/contact-me" element={<ContactMe />} />
+            <Route path="/home-page" element={< HomePage />} />
           </Routes>
         </AuthContext.Provider>
       </DestinationContext.Provider>

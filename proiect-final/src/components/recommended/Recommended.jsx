@@ -21,7 +21,7 @@ function Recommended({ searchTerm }) {
       <header className="header-destinations">
         <h1 className="recommended-destinations">
           {" "}
-          Recommended destinations for you
+          Recommended destinations
         </h1>
       </header>
 

@@ -12,7 +12,7 @@ function Carousel() {
   return (
     <>
       <header className="trending-destinations">
-        <h1> Trending destinations</h1>
+        <h1> Trending now</h1>
       </header>
       <ul className="trending">
         {trendingDestinations.map((destination) => (

@@ -44,6 +44,7 @@ export default function Login() {
   return (
     <>
       <form onSubmit={login} className="login">
+        <h2 className="login-heading">Login </h2>
         {error ? <p className="error">{error}</p> : ""}
         <label htmlFor="email"></label>
         <div className="row">

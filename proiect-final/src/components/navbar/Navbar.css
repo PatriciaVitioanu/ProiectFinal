@@ -11,7 +11,7 @@ h3 {
 
 :root {
   --mainColor: #fbd786;
-  --secondaryColor: white;
+  --secondaryColor: #f12711;
 }
 
 .nav-header {
@@ -21,8 +21,8 @@ h3 {
   justify-content: space-between;
   height: 60px;
   padding: 0 2rem;
-  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
 
 nav a {

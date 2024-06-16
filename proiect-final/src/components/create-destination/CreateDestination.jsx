@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
-import "./CreateDestination.css";
-import { DestinationContext } from "../../App";
 import { useContext } from "react";
+import { DestinationContext } from "../../App";
 import "./CreateDestination.css";
 
 export default function CreateDestination() {
@@ -24,6 +23,7 @@ export default function CreateDestination() {
 
     const destination = {
       title: title.value,
+      createdByUser: localStorage.getItem("userId"),
       description: description.value,
       imageUrl: url.value,
       year: year.value.substring(0, 4),
@@ -53,16 +53,15 @@ export default function CreateDestination() {
         navigate("/");
         console.log("destination added");
       });
-
-      formElement.reset();
     }
   }
 
   return (
-    <form onSubmit={saveDestination} className="create-destination">
-      <p>Complete the fileds with lovely destinations:</p>
-      <div className="destination-row">
-        <label htmlFor="title" className="destination-label"></label>
+    <form onSubmit={saveDestination} className="form-container">
+      <h2>Create a new destination - where you dream to go to :)</h2>
+      <br/>
+      <div className="form-row">
+        <label htmlFor="title"></label>
         <input
           name="title"
           className="form-input"
@@ -75,8 +74,8 @@ export default function CreateDestination() {
         />
       </div>
 
-      <div className="destination-row">
-        <label htmlFor="description" className="destination-label"></label>
+      <div className="form-row">
+        <label htmlFor="description"></label>
         <input
           name="description"
           className="form-input"
@@ -89,8 +88,8 @@ export default function CreateDestination() {
         />
       </div>
 
-      <div className="destination-row">
-        <label htmlFor="imgUrl" className="destination-label"></label>
+      <div className="form-row">
+        <label htmlFor="imgUrl"></label>
         <input
           name="url"
           className="form-input"
@@ -102,12 +101,12 @@ export default function CreateDestination() {
         />
       </div>
 
-      <div className="destination-row">
-        <label htmlFor="year" className="destination-label"></label>
+      <div className="form-row">
+        <label htmlFor="year"></label>
         <input
           name="year"
           className="form-input"
-          type="string"
+          type="number"
           id="year"
           required
           defaultValue={selectedDestination?.year}
@@ -115,14 +114,14 @@ export default function CreateDestination() {
         />
       </div>
 
-      <div className="destination-row">
-        <label htmlFor="season" className="destination-label"></label>
+      <div className="form-row">
+        <label htmlFor="season">Season:</label>
         <select
           name="season"
           id="season"
           required
           defaultValue={selectedDestination?.season}
-          className="destination-select"
+          className="form-input"
         >
           <option disabled>Select one</option>
           <option value="spring">Spring</option>
@@ -132,17 +131,17 @@ export default function CreateDestination() {
         </select>
       </div>
 
-      <div className="destination-row">
-        <label htmlFor="continent" className="destination-label"></label>
+      <div className="form-row">
+        <label htmlFor="continent">Continent:</label>
         <select
           name="continent"
           id="continent"
           required
           defaultValue={selectedDestination?.continent}
-          className="destination-select"
+          className="form-input"
         >
           <option disabled>Select one</option>
-          <option value="europa">Europa</option>
+          <option value="europa">Europe</option>
           <option value="asia">Asia</option>
           <option value="africa">Africa</option>
           <option value="south america">South America</option>
@@ -152,7 +151,9 @@ export default function CreateDestination() {
         </select>
       </div>
 
-      <button className="destination-button">Save destination</button>
+      <button type="submit" className="form-button">
+        Save Destination
+      </button>
     </form>
   );
 }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
 .destination--large .destination__image {
   width: 400px;
   height: 220px;
@@ -9,14 +11,18 @@
 }
 
 .destination__image {
-  width: 230px;
-  height: 130px;
+  width: 350px;
+  height: 250px;
   border-radius: 6px;
 }
 
 .destination__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
   margin: 0;
-  font-size: 0.6rem;
+
 }
 
 span {
@@ -26,6 +32,10 @@ span {
 .destination__year,
 .destination__season,
 .destination__continent {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
   margin-right: 0.5rem;
 }
 
@@ -35,6 +45,10 @@ span {
   transition: font-size 0.3s ease;
 }
 
-.destination__info:hover {
-  font-size: 30px;
+.trending-item:hover{
+  color: teal
+}
+
+a{
+  text-decoration: none;
 }

@@ -12,10 +12,8 @@ function Navbar() {
   const navRef = useRef();
 
   const showNavbar = () => {
-    // Toggle class on the navbar to show/hide it
     navRef.current.classList.toggle("responsive_nav");
 
-    // Toggle class on other elements to hide/show them
     document.body.classList.toggle("hide-body-content");
   };
 
@@ -34,7 +32,7 @@ function Navbar() {
     <header className="nav-header">
       <h3>ukiyo</h3>
       <nav ref={navRef}>
-        <Link to="/about-me">About me</Link>
+        <Link to="/home-page">About Us</Link>
         <Link to="/contact-me">Contact</Link>
         <Link to="/">Destinations</Link>
         {auth ? (

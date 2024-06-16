@@ -3,12 +3,12 @@ import "./Register.css";
 
 export function Register() {
   const navigate = useNavigate();
+
   function register(event) {
     event.preventDefault();
 
     const formElement = event.target;
-    const { email, firstName, lastName, password, reTypePassword } =
-      formElement;
+    const { email, firstName, lastName, password, reTypePassword } = formElement;
 
     if (password.value !== reTypePassword.value) {
       console.warn("Passwords don't match");
@@ -33,6 +33,7 @@ export function Register() {
 
   return (
     <form onSubmit={register} className="register">
+      <h2 className="register-heading">Register</h2>
       <label htmlFor="firstName"></label>
       <div className="register-row">
         <input
@@ -55,14 +56,14 @@ export function Register() {
 
       <label htmlFor="email"></label>
       <div className="register-row">
-        <input type="email" id="email1" name="email" placeholder="Email" />
+        <input type="email" id="email" name="email" placeholder="Email" />
       </div>
 
       <label htmlFor="password"></label>
       <div className="register-row">
         <input
           type="password"
-          id="password1"
+          id="password"
           name="password"
           placeholder="Password"
         />

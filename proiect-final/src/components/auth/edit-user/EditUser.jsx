@@ -31,11 +31,10 @@ export default function EditUser() {
     event.preventDefault();
 
     const formElement = event.target;
-    const { email, firstName, lastName, password, reTypePassword } =
-      formElement;
+    const { email, firstName, lastName, password, reTypePassword } = formElement;
 
     if (password.value !== reTypePassword.value) {
-      alert("Passwords dont match!");
+      alert("Passwords don't match!");
       return;
     }
 
@@ -54,7 +53,7 @@ export default function EditUser() {
       },
       body: JSON.stringify(updatedUser),
     }).then((response) => {
-      if (!response.ok) alert("Wrong password!");
+      if (!response.ok) alert("Update failed!");
     });
 
     navigate("/");
@@ -62,6 +61,7 @@ export default function EditUser() {
 
   return (
     <form onSubmit={editUser} className="edit-user">
+      <h2 className="edit-heading">Edit User Information</h2>
       <label htmlFor="firstName">First name:</label>
       <div className="edit-row">
         <input
@@ -104,7 +104,7 @@ export default function EditUser() {
           type="password"
           id="reTypePassword"
           name="reTypePassword"
-          placeholder="Re type password"
+          placeholder="Confirm password"
           required
         />
       </div>

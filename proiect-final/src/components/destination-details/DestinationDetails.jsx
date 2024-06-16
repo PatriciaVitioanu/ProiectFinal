@@ -27,8 +27,11 @@ export default function DestinationDetails() {
   if (!destination) {
     return;
   }
-
+  const userId = localStorage.getItem("userId");
+  const destinationUserId = destination.createdByUser;
   const { id, title, imageUrl, continent, description } = destination;
+
+  console.log(userId, destinationUserId);
 
   function deleteDestination() {
     const userConfirmedAction = confirm(
@@ -51,27 +54,33 @@ export default function DestinationDetails() {
 
   return (
     <section>
-      <header>
-        <h3 className="details_title"> {title} </h3>
-      </header>
-
-      <img className="details_img" src={imageUrl} />
-
-      <p className="destination-details__description">{description}</p>
-
-      <p className="destination-details__continent"> Continent: {continent} </p>
-      {auth ? (
+      <div className="destination_details_section">
+        <img className="details_img" src={imageUrl} />
+        <div className="destination_details_text">
+          <header>
+            <h3 className="details_title"> {title} </h3>
+          </header>
+          <p className="destination-details__description">{description}</p>
+          <p className="destination-details__continent">
+            {" "}
+            Continent: {continent}{" "}
+          </p>
+        </div>
+      </div>
+      <div className="destination_details_buttons">
+      {auth && userId == destinationUserId ? (
         <>
-          <button className="details_button_delete" onClick={deleteDestination}>
-            Delete destination
-          </button>
           <button className="details_button_edit" onClick={editDestination}>
             Edit destination
+          </button>
+          <button className="details_button_delete" onClick={deleteDestination}>
+            Delete destination
           </button>
         </>
       ) : (
         ""
       )}
+      </div>
     </section>
   );
 }

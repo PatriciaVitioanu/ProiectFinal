@@ -19,11 +19,19 @@
       "firstName": "Alin",
       "lastName": "Popa",
       "id": 3
+    },
+    {
+      "email": "patricia@gmail.com",
+      "password": "$2a$10$cuKZBQXN00O28KlcLFDs3urY.MQPkDvpTUP.wm3viWB4QJpgt8Ku.",
+      "firstName": "pati",
+      "lastName": "patricia",
+      "id": 4
     }
   ],
   "destinations": [
     {
       "id": "c0efb9f6-3395-4743-b210-85087564ab77",
+      "createdByUser": 2,
       "title": "Canary Islands",
       "imageUrl": "https://www.ambassadorcruiseline.com/site/assets/files/2082/aerial_view_of_puerto_de_la_cruz-_tenerife.jpg",
       "year": 2024,
@@ -34,6 +42,7 @@
     },
     {
       "title": "Japan",
+      "createdByUser": 2,
       "imageUrl": "https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg",
       "year": "2024",
       "season": "Spring",
@@ -43,6 +52,7 @@
     },
     {
       "id": "d804245e-b539-4917-9fbd-96ccd951c8e6",
+      "createdByUser": 2,
       "title": "Tanzania",
       "imageUrl": "https://www.state.gov/wp-content/uploads/2018/11/Tanzania-e1555938157355-2501x1406.jpg",
       "year": 2025,
@@ -52,26 +62,19 @@
       "description": "Embark on a captivating journey through Tanzania, starting with your arrival in Arusha, the gateway to some of Africa's most renowned national parks. Settle into a cozy lodge and spend your first evening relaxing and preparing for the adventures ahead. Begin your safari with a visit to Tarangire National Park, known for its large elephant herds and majestic baobab trees. Spend the night in a comfortable tented camp under the African sky. Continue your journey to the Serengeti, where you'll witness the incredible wildlife and possibly the Great Migration, staying in a luxurious safari lodge amidst the vast plains. Head to Ngorongoro Crater, a UNESCO World Heritage Site, and marvel at the diverse ecosystems within this massive caldera, home to an abundance of wildlife. Spend a night at a lodge on the crater rim, soaking in the breathtaking views. From the wildlife-rich landscapes, fly to the tropical paradise of Zanzibar. In Stone Town, a UNESCO World Heritage Site, wander through narrow streets filled with history and culture, visit the vibrant markets, and savor the local cuisine. Move to the island's stunning beaches, where you can relax on the white sands, snorkel in crystal-clear waters, and enjoy the serene Indian Ocean. Take a day to explore Jozani Forest, home to the endemic red colobus monkey, and the Spice Farms, where you can learn about the island's spice trade history. Conclude your Tanzanian adventure with a sunset dhow cruise, reflecting on the diverse experiences and unforgettable moments that make this journey truly extraordinary."
     },
     {
-      "id": "57b84793-8206-4633-8541-abd120a86bd0",
-      "title": "South Korea",
-      "imageUrl": "https://lp-cms-production.imgix.net/2019-06/09a64fea2933f6da77ab07d671d1f678-south-korea.jpg",
-      "year": 2025,
-      "season": "Autumn",
-      "continent": "Asia",
-      "description": "Embark on an unforgettable journey through South Korea with me as your guide. We'll start our adventure in Seoul, where the vibrant energy of the city awaits. From exploring ancient palaces and traditional neighborhoods to indulging in the bustling street food scene, Seoul offers a perfect blend of history, culture, and modernity. We'll take a poignant excursion to the Demilitarized Zone (DMZ) to gain insights into Korea's divided history and hopes for reunification. Moving south, we'll discover the historic treasures of Gyeongju, known as the museum without walls, and soak in the tranquility of its ancient temples and royal tombs. In Busan, we'll wander through colorful villages, feast on fresh seafood, and bask in the beauty of its beaches and mountains. Finally, we'll escape to the idyllic Jeju Island, exploring its volcanic landscapes, lush gardens, and pristine beaches. With each destination offering its own unique charm, our tour promises to be a journey filled with discovery, cultural immersion, and lasting memories."
-    },
-    {
       "title": "Phillipines",
+      "createdByUser": 2,
       "description": "Embark on an enchanting journey through the Philippines, where each island holds a unique treasure waiting to be discovered. We'll begin our adventure in Manila, the bustling capital, where we'll immerse ourselves in the rich history and vibrant culture of Intramuros, explore the lively markets of Quiapo, and indulge in delicious Filipino cuisine. From Manila, we'll fly to Palawan, hailed as the Last Frontier for its stunning natural beauty. Here, we'll explore the otherworldly landscapes of the Puerto Princesa Underground River, relax on pristine beaches in El Nido, and marvel at the enchanting lagoons and limestone cliffs of Coron. Next, we'll journey to the island of Bohol, where we'll encounter the iconic Chocolate Hills, visit the adorable tarsiers at the Tarsier Sanctuary, and cruise along the Loboc River. Continuing our exploration, we'll head to Cebu, known as the Queen City of the South, to admire the historic landmarks of Cebu City and dive into the underwater paradise of Moalboal or Malapascua. Our journey will conclude in Boracay, renowned for its powdery white sands and azure waters. Here, we'll unwind on the beach, indulge in thrilling water sports, and witness breathtaking sunsets that will leave an indelible mark on our memories. With its diverse landscapes, rich cultural heritage, and warm hospitality, the Philippines promises an unforgettable adventure filled with endless wonders.",
       "imageUrl": "https://i.natgeofe.com/n/04505c35-858b-4e95-a1a7-d72e5418b7fc/steep-karst-cliffs-of-el-nido-in-palawan_16x9.jpg",
       "year": "2025",
-      "season": "autumn",
-      "continent": "asia",
+      "season": "Autumn",
+      "continent": "Asia",
       "trending": true,
       "id": "bb59f169-742b-47d8-b739-09c96c106c26"
     },
     {
       "id": "ad617845-0fe9-48ac-b3cc-a7248d8c5a53",
+      "createdByUser": 2,
       "title": "Canada",
       "imageUrl": "https://content.api.news/v3/images/bin/15a68dc4169b2e0bdb8e679a81d51d79",
       "year": 2025,
@@ -82,6 +85,7 @@
     },
     {
       "id": "a94ecfeb-6698-40f8-8b55-733081ef4897",
+      "createdByUser": 2,
       "title": "Hawaii",
       "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/201230100452-10-2021-travel-destinations-hawaii.jpg?q=x_0,y_0,h_1632,w_2900,c_fill/h_720,w_1280",
       "year": 2024,
@@ -91,6 +95,7 @@
     },
     {
       "id": "6810e486-5c3a-41bd-9e10-4184c4f41aaf",
+      "createdByUser": 2,
       "title": "Egypt",
       "imageUrl": "https://c4.wallpaperflare.com/wallpaper/529/70/359/sphynx-pyramid-egypt-old-building-wallpaper-preview.jpg",
       "year": 2025,
@@ -101,6 +106,7 @@
     },
     {
       "id": "766f7a42-af5f-4f15-a29b-addd16abf1a0",
+      "createdByUser": 2,
       "title": "Australia",
       "imageUrl": "https://images7.alphacoders.com/716/716104.jpg",
       "year": 2026,
@@ -108,6 +114,16 @@
       "continent": "Australia",
       "trending": true,
       "description": "Embark on an unforgettable journey through the diverse landscapes and vibrant cities of Australia, a land of breathtaking natural beauty and cultural richness. Our adventure begins in Sydney, where the iconic Sydney Opera House and Sydney Harbour Bridge welcome us to this cosmopolitan metropolis. Explore the picturesque shores of Bondi Beach, wander through the historic streets of The Rocks, and take a scenic ferry ride across the sparkling waters of Sydney Harbour. From Sydney, we'll venture into the heart of the Outback, where the vast expanses of the Red Centre stretch as far as the eye can see. Witness the majestic beauty of Uluru at sunrise and sunset, learn about the ancient indigenous culture of the region, and marvel at the striking landscapes of Kata Tjuta and Kings Canyon. Next, we'll journey to the tropical north of Queensland, where the Great Barrier Reef awaits with its dazzling array of marine life and coral formations. Snorkel or dive among vibrant coral gardens, relax on pristine island beaches, and explore the lush rainforests of the Daintree. Conclude our adventure in Melbourne, a dynamic city known for its eclectic arts scene, vibrant laneways, and world-class dining. Explore the charming neighborhoods of Fitzroy and St Kilda, visit the renowned street art of Hosier Lane, and take a scenic drive along the Great Ocean Road to witness the stunning limestone cliffs of the Twelve Apostles. As our journey comes to an end, we'll carry with us memories of the diverse landscapes, friendly locals, and unforgettable experiences that make Australia a truly remarkable destination."
+    },
+    {
+      "title": "Uganda",
+      "createdByUser": "4",
+      "description": "Maimute",
+      "imageUrl": "https://cdn.britannica.com/57/192657-050-B51486E0/Kampala-Uganda.jpg",
+      "year": "2024",
+      "season": "spring",
+      "continent": "africa",
+      "id": "z6j_wZm"
     }
   ]
 }
